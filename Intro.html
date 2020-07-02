@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JQuery Intro</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="JQ/css/bootstrap.min.css">
+	<style type="text/css">
+		.big{
+			text-shadow: 2px 2px 4px #000;
+			color: yellow;
+			text-align: center;
+
+		}
+	</style>
+</head>
+<body>
+
+
+	<!-- JQuery -->
+<script type="text/javascript" src="JQ/js/jquery.min.js"></script>
+<script type="text/javascript" src="JQ/js/bootstrap.bundle.min.js"></script>
+
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			console.log('document_ready');
+
+			$('#content').find('h3').html('new text for h3!');
+			$('#content').find('p').html('Hello World!');
+
+			//$('p').html('hello world');
+			$('#content p:first').html('New <strong> first</strong> paragraph!');
+
+            //setting an individual property
+			$('#content h3').css('font-size','50px');
+
+			//setting a multiple properties
+			$('p').css({'font-size':'20px','color':'blue'});
+
+			//add class
+			$('h1').addClass('big');
+
+			//remove class
+			$('h1').removeClass('hello');
+
+			//toggle class
+			//$('h1').toggleClass('hello');
+
+			//single attribute
+			$('a.facebook').attr('href','http://www.facebook.com/');
+			//multiple attributes
+			//$('a.instagram').attr({
+				//'title' :'Instagram',
+				//'href' :'http://www.instagram.com/'
+
+		     $('h1').click(function(){
+					console.log('click h1');
+				});
+			$('h3').bind('click',function(){
+				console.log('click h3');
+			});
+
+
+			$('h3').click(function(){
+				$('h3').addClass('text-success');
+			});
+
+			
+			$('p').bind({
+				'click' : function(){
+					console.log('click p');
+				},
+				'mouseover' :function(){
+					console.log('mouseover p');
+				}
+
+			});
+
+
+
+
+
+			// readyfn();
+
+		});
+
+
+		$(function(){
+			console.log('shorthand for document ready function');
+		});
+
+		function readyfn(){
+			console.log('this is readyfn');
+		}
+
+		$(document).ready(readyfn);
+
+
+        //JS
+		//document.getElementByClassName('aa');
+
+		//JQuery
+		// $('.aa');
+		// $('div.aa');
+		// $('div#contents ul.people li');
+
+
+
+
+
+		
+	</script>
+
+	<h1 class="hello"> Hello </h1>
+	<a href="http://www.google.com" target="_blank" title="google">Google</a>
+	<a href="" class="facebook">Facebook</a>
+	<a href="" class="instagram">Instagram</a>
+	<div id="content">
+		<h3>Testing</h3>
+
+
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+
+		</p>
+		<p>
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+
+		</p>
+	</div>
+
+
+
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

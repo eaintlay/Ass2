@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FadeIn</title>
+	<link rel="stylesheet" type="text/css" href="JQ/css/bootstrap.min.css">
+	<script type="text/javascript" src="JQ/jquery.min.js"></script>
+	<script type="text/javascript" src="JQ/js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+	<script>
+		$(document).ready(function(){
+		  $(".btn1").click(function(){
+		    $("p").fadeOut();
+		  });
+		  $(".btn2").click(function(){
+		    $("p").fadeIn();
+		  });
+
+
+
+		  $('#animatebtn').click(function(){
+			$('.firstanimatebox').animate({
+				right: '500px' ,
+				opacity: 0.5
+			})
+		});
+
+		  //Get Text
+		  $('#showtextBtn').click(function() {
+		  	var text = $('.hello').text();
+		  	console.log(text);
+		  	/* Act on the event */
+		  });
+
+          //Get html
+		   $('#showhtmlBtn').click(function() {
+		  	var html = $('.hello').html();
+		  	console.log(html);
+		  	
+		  });
+
+          //Get Attribute
+		   $('#showattributeBtn').click(function(){
+		   	var attrtext = $('.google').attr('href');
+		   	console.log(attrtext);
+		   })
+
+		   //Get Form value
+		   $('#showvalueBtn').click(function() {
+		   	 var valtext = $('#name').val();
+		   	 console.log(valtext);
+		   });
+
+		   //Set Text
+		   $('#settextBtn').click(function(event) {
+		   	 $('.hello').text('JP Batch - 1');
+		   });
+
+
+		   //Set html
+		   $('#sethtmlBtn').click(function(event) {
+		   	$('.hello').html('JP <i> Batch - 1 </i>');
+		   });
+
+		   //Set Attribute
+		   $('#setattributeBtn').click(function(){
+		   	 $('.google').attr('href','https://www.facebook.com');
+		   	
+		   });
+
+
+		   //Set Value
+		   $('#setvalueBtn').click(function() {
+		   	$('#email').val('admin@gmail.com');
+		   });
+
+
+
+		});
+	</script>
+
+
+
+	<p>This is a paragraph.</p>
+
+	<button class="btn1">Fade out</button>
+	<button class="btn2">Fade in</button>
+
+
+
+
+
+	<div class="row mt-5">
+	<h3>Animation</h3>
+
+	<div class="col-12">
+		<div class="bg-success h-50 mb-5 text-white w-25 text-center position-absolute py-2  firstanimatebox">Animation Div</div>
+
+		<button class="btn btn-success d-block mt-5" 
+		id="animatebtn">Click to Animate</button>
+	</div>
+</div>
+</div>
+
+
+
+<button class="btn btn-success" id="showtextBtn">Show Text</button>
+<button class="btn btn-success" id="showhtmlBtn">Show HTML</button>
+<button class="btn btn-success" id="showattributeBtn">Show Attribute</button>
+<h1 class="hello">Hello<b>Hello World</b></h1>
+
+<a href="http://www.google.com/" target="_blank" title="Google" class="google">Google</a>
+
+<a href="" class="facebook">Facebook</a>
+
+
+<div class="row">
+	<div class="col-12">
+		<form class="form-inline">
+			<div class="form-group">
+				<label for="name">Name:</label>
+				<input type="text" name="name" class="form-control" id="name" placeholder="Enter Name">
+			</div>
+
+			<button type="button" class="btn btn-primary mb-2" id="showvalueBtn">Save
+			</button>
+		</form>
+	</div>
+</div>
+
+
+
+<button class="btn btn-success" id="settextBtn">
+	Set Text
+</button>
+
+<button class="btn btn-secondary" id="sethtmlBtn">
+	Set HTML
+</button>
+
+<button class="btn btn-success" id="setattributeBtn">
+	Set Attribute
+</button>
+
+<button class="btn btn-primary" id="setvalueBtn">
+	Set Value
+</button>
+
+
+<div class="row">
+	<div class="col-12">
+		<form class="form-inline" >
+			<div class="form-group">
+				<label for="name">Email:</label>
+				<input type="text" name="name" class="form-control" id="email" placeholder="Enter Email" value="haythi315811@gmail.com">
+			</div>
+
+			<button type="button" class="btn btn-primary mb-2" id="showvalueBtn">Save
+			</button>
+		</form>
+	</div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise1</title>
+	<link rel="stylesheet" type="text/css" href="JQ/css/bootstrap.min.css">
+</head>
+<body>
+	<script type="text/javascript" src="JQ/js/jquery.min.js"></script>
+	<script type="text/javascript" src="JQ/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript">
+		//auto hide after 300s
+		$(document).ready(function(){
+
+
+		$('#chide').click(function(){
+		$('.badge-primary').hide(1000);
+		});
+
+
+
+		$('#show').click(function(){
+			$('.badge-primary').show(3000);
+		});
+
+
+
+		$('#hide').click(function(){
+			$('.badge-secondary').hide(3000);
+		});
+
+
+		
+
+
+		$('#show').click(function(){
+			$('.badge-secondary').show();
+		});
+
+		$('#toggle').click(function(){
+			$('span.badge-success').toggle();
+		});
+
+		// $('#fadein').click(function(){
+		// 	console.log('aa');
+		// 	$('body').fadeIn();
+		// });
+
+
+		// $('#fadeout').click(function() {
+		// 	$('span.fadein-normal').fadeIn();
+		// 	$('span.faedein-fast').fadeIn('fast');
+		// 	$('span.fadein-slow').fadeIn('slow');
+		// 	$('span.fadein-second').fadeIn(300);
+		// });
+
+
+		// $('#fadetoggle').click(function() {
+		// 	$('span.fadein-normal').fadeIn();
+		// 	$('span.faedein-fast').fadeIn('fast');
+		// 	$('span.fadein-slow').fadeIn('slow');
+		// 	$('span.fadein-second').fadeIn(300);
+		// })
+
+
+
+		// $('#slideup').click(function(){
+		// 	$(".slideupText").slideUp('slow');
+		// });
+
+
+		$('#animatebtn').click(function(){
+			$('.firstanimatebox').animate({
+				left: '500px' ,
+				opacity: 0.5
+			})
+		});
+
+
+
+});
+
+	</script>
+
+
+   <div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-5">Show/Hide Function</h1>
+    
+  </div>
+</div>
+
+
+
+
+<div class="container">
+	<h3>Show  / Hide Toggle</h3>
+	<span class="badge badge-secondary" id="chide">Click To Hide</span>
+    <span class="badge badge-success">Toggle between hide and show</span>
+    <br>
+
+    <button type="button" class="btn btn-primary" id="hide">Hide</button>
+  <button type="button" class="btn btn-secondary" id="show">Show</button>
+  <button type="button" class="btn btn-success" id="toggle">Toggle</button>
+
+
+</div><br>
+
+
+
+<div class="container">
+	<h3>Fade In/ Out /Toggle</h3>
+
+
+<span  class="badge badge-warning" id="fadein-normal" style="display: none;">Fade In</span> 
+  <span class="badge badge-warning faedein-fast" style="display: none;">Fade In Fast</span>
+  <span  class="badge badge-warning fadein-slow" style="display: none;">Fade In Slow
+  </span> 
+  <span  class="badge badge-warning fadein-second" style="display: none;">Fade In 300ms
+  </span> 
+
+
+
+	<span class="badge badge-danger">Fade Out</span>
+    <span class="badge badge-danger">Fade Out Fast</span>
+    <span class="badge badge-danger">Fade Out Show</span>
+    <span class="badge badge-danger">Fade Out 3000ms</span>
+    <br>
+
+   <button type="button" class="btn btn-primary" id="fadein">Fade In</button>
+  <button type="button" class="btn btn-secondary list-group-item-danger" id="fadeout">Fade Out</button>
+  <button type="button" class="btn btn-success" id="fadetoggle">Fade Toggle</button>
+
+
+</div><br>
+
+
+<div class="container">
+	<h3>Slide Up/Down/Toggle</h3>
+	<div class="row">
+		<div class="col-md-4">
+			<div class="bg bg-primary text-white text-center" id="slideup">Click to slide  up panel</div>
+			<div class="bg-light p-5 slideupText">Slide Up Text!..</div>
+		</div>
+		<div class="col-md-4">
+			<div class="bg bg-primary text-white text-center" id="slidedown">Click to slide  down panel</div>
+			<div class="bg-light p-5 slidedownText" style="display: none;">Slide Down Text!..</div>
+		</div>
+		<div class="col-md-4">
+		<div class="bg bg-primary" id="slidetoggle">Click to slide  toggle panel</div>
+			<div class="bg-light p-5 slidetoggleText">Slide Toggle Text!..</div>
+	</div>
+	
+</div>
+
+
+<div class="row mt-5">
+	<h3>Animation</h3>
+
+	<div class="col-12">
+		<div class="bg-success h-50 mb-5 text-white w-25 text-center position-absolute py-2  firstanimatebox">Animation Div</div>
+
+		<button class="btn btn-success d-block mt-5" 
+		id="animatebtn">Click to Animate</button>
+	</div>
+</div>
+</div>
+
+
+
+
+</body>
+</html>

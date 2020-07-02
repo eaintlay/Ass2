@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Exercise</title>
+	<link rel="stylesheet" type="text/css" href="JQ/css/bootstrap.min.css">
+	<script type="text/javascript" src="JQ/jquery.min.js"></script>
+	<script type="text/javascript" src="JQ/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+	
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('p.one').addClass('bg-success text-white d-inline');
+		$('p.two').addClass('bg-warning text-black d-block');
+		$('p.three').addClass('bg-danger display-3');
+
+
+
+		$('#animatebtn').click(function(){
+			$('.firstanimatebox').animate({
+				left: '500px' ,
+				opacity: 0.5
+			})
+		});
+	});
+</script>
+
+
+<p class="one">Hello World One</p>
+<p class="two">Hello World Two</p>
+<p class="three">Hello World Three</p>
+
+
+
+
+
+
+<div class="row mt-5">
+	<h3>Animation</h3>
+
+	<div class="col-12">
+		<div class="bg-success h-50 mb-5 text-white w-25 text-center position-absolute py-2  firstanimatebox">Animation Div</div>
+
+		<button class="btn btn-success d-block mt-5" 
+		id="animatebtn">Click to Animate</button>
+	</div>
+</div>
+</div>
+
+
+<div class="row">
+	<div class="col-md-12 w-100 h-100">
+		<button class="btn btn-success d-block mt-5" id="sizebtn"></button>
+	</div>
+</div>
+
+
+
+
+
+</body>
+</html>
